@@ -1,0 +1,18 @@
+.header {
+  margin: 0;
+  background-color: rgb(165, 190, 245);
+  height: 100px;
+  box-shadow: 5px 5px 10px;
+
+  h1 {
+    text-align: center;
+    font-family: 'Saira Stencil One', cursive;
+    color: red;
+    font-size: 3rem;
+    padding-top: 25px;
+
+    @media (max-width: 550px) {
+      font-size: 2rem;
+    }
+  }
+}
