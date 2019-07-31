@@ -1,33 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
+import './photocard.styles.scss';
 
-export default function PhotoCard({ limit }) {
-  const [photos, setPhoto] = useState([]);
+export default function PhotoCard() {
+  //url
+  const [photo, setPhoto] = useState([]);
 
   useEffect(() => {
-    Axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY').then(
-      res => {
-        console.log('RESPONSE:', res.data.url);
-      }
-    );
-  });
+    Axios.get(
+      'https://api.nasa.gov/planetary/apod?api_key=3IAG373NoqLdseheSZgTjg0fCGE8IYiGUt1x1PWH'
+    )
+      .then(res => {
+        // console.log('RESPONSE:', res.data.url);
+        setPhoto(res.data.url);
+      })
+      .catch(err => console.log('ERROR:', err));
+  }, []);
 
   return (
-    <div className='photo'>
-      {photos.map(photoUrl => {
-        return <img url={photos.data.url} />;
-      })}
+    <div className='nasaPhoto'>
+      <img src={photo} alt='space' />
     </div>
   );
 }
-
-// const images = [
-//     'https://apod.nasa.gov/apod/image/1907/ngc3576_campbell_960.jpg'
-//   ];
-
-// <div>
-// <img
-//   src='https://apod.nasa.gov/apod/image/1907/ngc3576_campbell_960.jpg'
-//   alt='NASA Photo of the day'
-// />
-// </div>

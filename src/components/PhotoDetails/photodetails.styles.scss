@@ -1,0 +1,27 @@
+.photo-details {
+  position: absolute;
+  top: 90%;
+  background-color: rgba(0, 0, 0, 0.514);
+  color: rgb(207, 206, 206);
+  font-size: 1rem;
+  margin-top: 10px;
+  padding: 10px 50px;
+  .title {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .photo-date {
+    text-align: center;
+    margin: 10px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+  .copyright {
+    margin: 10px;
+    text-align: center;
+  }
+}
