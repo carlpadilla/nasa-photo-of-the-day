@@ -26,7 +26,7 @@ export default function PhotoCard() {
         src={photo}
         as='a'
         size='large'
-        href='http://google.com'
+        href='https://www.nasa.gov/'
         target='_blank'
       />
     </div>
