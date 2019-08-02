@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
+import { Image } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
 import './photocard.styles.scss';
 
 export default function PhotoCard() {
@@ -19,7 +21,18 @@ export default function PhotoCard() {
 
   return (
     <div className='nasaPhoto'>
-      <img src={photo} alt='space' />
+      <Image
+        className='nasaPhotos'
+        src={photo}
+        as='a'
+        size='large'
+        href='http://google.com'
+        target='_blank'
+      />
     </div>
   );
 }
+
+// <div className='nasaPhoto'>
+//     <img src={photo} alt='space' />
+//   </div>
